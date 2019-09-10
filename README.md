@@ -1,3 +1,3 @@
 # RTLS
-A Solver for Quadratically Constrained Total Least Squares Problems
+A Solver for Quadratically Constrained Total Least Squares Problems.
 
