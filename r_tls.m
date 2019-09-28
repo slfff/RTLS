@@ -59,7 +59,7 @@ H_L = L' * L;
 x_0 = (H_A + lmd(1) * H_L)^(-1) * A' * y;
 % eta = abs(0.001 * lmd(1) / (norm(L * x_0)^2 - delta^2));
 for i = 2 : MAX_ITER
-    lmd(i) = lmd(i-1) + eta * (norm(L * x_0)^2 - delta^2);
+    lmd(i) = max(0, lmd(i-1) + eta * (norm(L * x_0)^2 - delta^2));
     x_1 = (H_A + lmd(i) * H_L)^(-1) * A' * y;
     if abs(norm(L * x_1) - delta) < delta * 1E-5 
         break;
